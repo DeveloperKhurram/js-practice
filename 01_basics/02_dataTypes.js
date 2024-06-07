@@ -31,3 +31,47 @@ const sym3 = Symbol("foo"); // symbol
 
 console.log(typeof undefined); // undefined
 console.log(typeof null); // object
+
+// String, Number, Boolean, BigInt, Symbol, Null, Undefined
+
+// Non-Primitive Data Types (Reference types)
+
+// Arrays, Objects, Functions
+const heros = ["humayon", "babar", "salahuddin"];
+let person = {
+  name: "Sheikh Abdullah",
+  age: "38",
+};
+const greetPpl = function () {
+  console.log("Welcome to JavaScript");
+};
+
+greetPpl();
+
+console.log(typeof heros); // object
+console.log(typeof person); // object
+console.log(typeof greetPpl); // function
+
+// Memory:
+
+// 1 - Stack: Primitive data type - You get a copy of the original value
+
+let ytChannel = "hiteshChaudhary";
+let anotherYtChannel = ytChannel;
+
+anotherYtChannel = "chaiAurCode";
+console.log(ytChannel); // hiteshChaudhary
+console.log(anotherYtChannel); // chaiAurCode
+
+// 2 - Heap: Reference data type - You get the reference of original value
+
+let jhon = {
+  email: "jhon@user.com",
+  city: "Kuala Lampur",
+};
+
+let adam = jhon;
+adam.city = "Bijing";
+
+console.log(jhon.city); // Bijing
+console.log(adam.city); // Bijing
