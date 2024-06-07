@@ -1,0 +1,16 @@
+JavaScript:
+- Frontend - Backend
+- Web - Mobile - IoT (Internet of Things)
+
+- To execute JavaScript: we need to install Node.js
+- Other ways to execute JavaScript: 
+Node.js, Browser(console), Deno.js
+
+- IDEs for development:
+VS Code, JetBrains Fleet
+
+- Development Vocabulary:
+Tree Parser, 
+
+- To open new Terminal : ctrl + shift + `
+`` => Backticks,   ~~ => Tilde
