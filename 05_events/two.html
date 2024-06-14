@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+    <br />
+    <br />
+    <div class="timer">
+      <button id="play">Play</button>
+      <button id="pause">Pause</button>
+      <p id="text" style="font-size: 32px"></p>
+    </div>
+  </body>
+  <script>
+    const message = () => {
+      // console.log("JS Async Practice");
+    };
+
+    document.querySelector("#stop").addEventListener(
+      "click",
+      function (e) {
+        clearTimeout(changeText);
+        clearTimeout(display);
+        // console.log("clearTimeout executed");
+      },
+      false
+    );
+
+    // const display = setTimeout(() => {
+    //   const javaScript = (document.querySelector("h1").innerHTML =
+    //     "JS is not hard");
+    // }, 2000);
+
+    const changeText = setTimeout(() => {
+      message();
+    }, 2000);
+
+    const p = document.querySelector("#text");
+    let playTime;
+    const playBtn = document
+      .querySelector("#play")
+      .addEventListener("click", function (e) {
+        playTime = setInterval(
+          (str) => {
+            p.innerHTML = `${str}` + new Date().toLocaleTimeString();
+          },
+          1000,
+          "Time: "
+        );
+      });
+
+    const stopBtn = document
+      .querySelector("#pause")
+      .addEventListener("click", function (e) {
+        clearInterval(playTime);
+      });
+  </script>
+</html>
