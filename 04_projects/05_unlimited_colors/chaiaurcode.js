@@ -12,12 +12,17 @@ const randomColor = () => {
 let startInterval;
 
 const startColorChange = () => {
-  startInterval = setInterval(() => {
+  let changeBgColor = () => {
     document.body.style.backgroundColor = randomColor();
-  }, 1000);
+  };
+
+  if (!startInterval) {
+    startInterval = setInterval(changeBgColor, 1000);
+  }
 };
 const stopColorChange = () => {
   clearInterval(startInterval);
+  startInterval = null;
 };
 
 document.querySelector("#start").addEventListener("click", startColorChange);
